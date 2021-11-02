@@ -43,7 +43,11 @@ ggplot() +
   geom_point(data=subset(df, mag > 7.5),
              aes(x = longitude, y = latitude, size = mag), col = big)+
   geom_text(data=subset(df, mag > 7.5),
+<<<<<<< HEAD
              aes(x = longitude, y = latitude, label = mag), size = 3, col = "#b35f00")+
+=======
+            aes(x = longitude, y = latitude, label = mag), size = 3, col = "#b35f00")+
+>>>>>>> 0e1ac8f (added day 2)
   
   scale_size_continuous(breaks = c(7.5, 8.8), range = c(8, 15))+
   labs(x="",y="",
@@ -97,5 +101,9 @@ ggplot() +
         plot.caption = element_text(size=10),
         axis.text=element_blank(),
         axis.ticks=element_blank())+
+<<<<<<< HEAD
   coord_quickmap(xlim = c(-85,-30), ylim = c(-56,10))
   
+=======
+  coord_quickmap(xlim = c(-85,-30), ylim = c(-56,10))
+>>>>>>> 0e1ac8f (added day 2)

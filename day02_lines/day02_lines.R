@@ -26,4 +26,8 @@ ggplot(rails) +
   theme(text = element_text(family = "Piazzolla"),
         plot.title = element_text(size = 25),
         plot.caption = element_text(size = 10),
+<<<<<<< HEAD
         plot.background = element_rect(fill = "grey90"))
+=======
+        plot.background = element_rect(fill = "grey90"))
+>>>>>>> 0e1ac8f (added day 2)

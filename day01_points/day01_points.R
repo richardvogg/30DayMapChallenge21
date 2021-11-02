@@ -30,7 +30,7 @@ small <- "#ffb703"
 big <- "#fb8500"
 
 ggplot() + 
-  borders(regions=c("Chile","Argentina","Peru", "Bolivia", "Paraguay", "Brazil"), 
+  borders(regions=c("Chile","Argentina","Peru", "Bolivia", "Paraguay", "Brazil", "Uruguay"), 
           fill="grey95", col = "grey80")+
   geom_point(data=subset(df, mag <= 7.5),
              aes(x = longitude, y = latitude), size = 2, col=small, alpha=0.1)+

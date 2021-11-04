@@ -27,3 +27,5 @@ ggplot(rails) +
         plot.title = element_text(size = 25),
         plot.caption = element_text(size = 10),
         plot.background = element_rect(fill = "grey90"))
+
+ggsave("day02_lines/plot.png", width=7, height=10, device="png") 

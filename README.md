@@ -11,3 +11,7 @@
 ### Day 3 - Polygons
 
 ![](day03_polygons/plot.png)
+
+### Day 4 - Hexagons
+
+![](day04_hexagons/plot.png)

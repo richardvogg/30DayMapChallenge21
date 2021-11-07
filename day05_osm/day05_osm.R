@@ -55,6 +55,8 @@ ggplot(test_color) +
 ggsave("day05_osm/plot.png",width=11,height=12, device="png") 
 
 
+
+##### other ideas
 #individual picking
 
 building <- bbox %>%
@@ -104,3 +106,59 @@ ggplot(data=woods$osm_polygons) +
   coord_sf(xlim = c(9.9287, 9.9336), ylim = c(49.7634,49.7665)) +
   theme_void()
 
+
+
+## Rokokogarten Veitshöchheim
+
+
+
+bbox <- getbb("Würzburg")
+bbox[1,] <- c(9.872107, 9.876110)
+bbox[2,] <- c(49.828040, 49.832157)
+
+
+bbox <- opq(bbox)
+
+test <- bbox %>% 
+  add_osm_features(features = c("\"amenity\"","\"building\"","\"highway\"","\"lanes\"",
+                                "\"landuse\"","\"leisure\"","\"natural\"","\"surface\"")) %>%
+  osmdata_sf() %>% .$osm_polygons %>%
+  select(osm_id, name, amenity, building, highway, lanes, landuse, 
+         leisure, natural, place, surface, geometry) 
+
+roads <- bbox %>%
+  add_osm_feature(key = "highway") %>%
+  osmdata_sf()
+
+test_color <- test %>%
+  mutate(fill = case_when(
+    leisure %in%  ~ "a",
+    landuse %in% c("farmland", "meadow") ~ "b",
+    natural %in% c("scrub", "grassland", "wood") ~ "c",
+    natural %in% c("heath", "slope", "sand") ~ "d",
+    amenity == "parking" ~ "e",
+    !is.na(building) ~ "f",
+    natural == "water" ~ "g",
+    
+    TRUE ~ "z"
+  ))
+
+ggplot(test_color) +
+  geom_sf(aes(fill = fill, size = fill), col = "grey", alpha = 0.5) +
+  
+  geom_sf(data=roads$osm_lines,col="grey20", size = 1.5) +
+  geom_sf(data=roads$osm_lines,col="white", size = 0.5) +
+  
+  geom_sf_text(aes(label = str_wrap(name, 15)), check_overlap = TRUE) +
+  
+  coord_sf(xlim = c(9.872107, 9.876110), ylim = c(49.828040, 49.832157)) +
+  scale_fill_manual(values = c("a" = "#D0F1BF", "b" = "#D0F1BF", "c" = "#64B96A", 
+                               "d" = "wheat", "e" = "grey50", 
+                               "f" = "grey30", "g" = "blue", "z" = NA)) +
+  scale_size_manual(values = c(0, 0, 0, 0, 0, 1, 1,0)) +
+  labs(title = "Rokoko Garden, Veitshöchheim, Germany",
+       caption = "© OpenStreetMap contributors") +
+  theme_void() +
+  theme(legend.position = "none",
+        plot.title = element_text(size = 35, family = "Crimson Text"),
+        plot.margin = margin(b = 25))

@@ -36,7 +36,8 @@ for(y in seq(1990, 2019)) {
   print(edge_bundle_map(year = y, commodities = '0304', path_to_img = "",
                   plot_col = "blue"))
 
-  ggsave(paste0("day08_blue/plot",i,".png"),width=15, height=7.21, device="png")
+  ggsave(paste0("day08_blue/plot",i,".png"),width=15, height=7.21, device="png",
+         dpi = 150)
   i = i+1
 }
 

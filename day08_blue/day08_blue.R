@@ -37,7 +37,7 @@ for(y in seq(1990, 2019)) {
                   plot_col = "blue"))
 
   ggsave(paste0("day08_blue/plot",i,".png"),width=15, height=7.21, device="png",
-         dpi = 150)
+         dpi = 100)
   i = i+1
 }
 

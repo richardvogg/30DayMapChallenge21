@@ -11,32 +11,15 @@ bbox[1,] <- c(2.077395, 2.125758)
 bbox[2,] <- c(48.799911, 48.826757)
 
 
-bbox <- opq(bbox)
-
-test <- bbox %>% osmdata_sf() %>% .$osm_polygons %>% 
-  select(osm_id, name, amenity, building, highway, lanes, landuse, 
-         leisure, natural, place, surface, geometry) 
 
 roads <- bbox %>%
+  opq() %>%
   add_osm_feature(key = "highway") %>%
-  osmdata_sf()
+  osmdata_sf() %>%
+  .$osm_lines %>%
+  filter(highway == "footway")
 
-roads <- roads$osm_lines %>%
-  filter(highway %in% c("footway"))
 
-
-test_color <- test %>%
-  mutate(fill = case_when(
-    !is.na(leisure) ~ "a",
-    landuse %in% c("farmland", "meadow") ~ "b",
-    natural %in% c("scrub", "grassland", "wood") ~ "c",
-    natural %in% c("heath", "slope", "sand") ~ "d",
-    ((place == "square") | (amenity == "parking")) ~ "e",
-    !is.na(building) ~ "f",
-    natural == "water" ~ "g",
-    
-    TRUE ~ "z"
-  ))
 
 ggplot(roads) +
   
@@ -55,4 +38,4 @@ ggplot(roads) +
         plot.background = element_rect(fill = "grey10"))
 
 
-ggsave("day09_monochrome/plot.png", width=10, height=10, device="png") 
+ggsave("day09_monochrome/plot.png", width=10, height=9.2, device="png") 

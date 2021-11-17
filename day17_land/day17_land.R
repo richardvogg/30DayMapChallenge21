@@ -33,7 +33,7 @@ map <- ggplot() +
        caption = "Data: https://data.terrapop.org/terraclip") +
   coord_quickmap() +
   bi_theme() +
-  expand_limits(x = c(3, 15)) +
+  expand_limits(x = c(4, 15)) +
   theme(axis.title = element_blank(),
         plot.title = element_text(size = 25),
         plot.caption = element_text(size = 12),
@@ -41,6 +41,6 @@ map <- ggplot() +
 
 ggdraw() +
   draw_plot(map, 0, 0, 1, 1) +
-  draw_plot(legend, 0.25, 0.65, 0.2, 0.2)
+  draw_plot(legend, 0.15, 0.7, 0.18, 0.18)
 
-ggsave("day17_land/plot.png",width=11,height=12, device="png") 
+ggsave("day17_land/plot.png",width=10,height=13, device="png") 

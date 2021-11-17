@@ -46,6 +46,8 @@
 
 ### Day 15 - Map without using a computer
 
+![](day15_withoutcomputer/plot.jpeg)
+
 ### Day 17 - Land
 
 ![](day17_land/plot.png)

@@ -31,3 +31,22 @@
 ### Day 8 - Blue
 
 ![](day08_blue/plot30.png)
+
+### Day 9 - Monochrome
+
+![](day09_monochrome/plot.png)
+
+### Day 10 - Raster
+
+![](day10_raster/plot.png)
+
+### Day 12 - Population
+
+![](day12_population/plot.png)
+
+### Day 15 - Map without using a computer
+
+### Day 17 - Land
+
+![](day17_land/plot.png)
+

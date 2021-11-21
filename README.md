@@ -52,3 +52,14 @@
 
 ![](day17_land/plot.png)
 
+### Day 18 - Water
+
+![](day18_water/plot.png)
+
+### Day 19 - Islands
+
+![](day19_islands/plot.png)
+
+### Day 21 - Elevation
+
+![](day21_elevation/plot.png)

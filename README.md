@@ -1,6 +1,6 @@
 # 30DayMapChallenge21
 
-![Link to the official repo](https://github.com/tjukanovt/30DayMapChallenge) of the challenge.
+[Link to the official repo](https://github.com/tjukanovt/30DayMapChallenge) of the challenge.
 
 ### Day 1 - Points
 

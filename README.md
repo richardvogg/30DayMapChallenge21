@@ -65,3 +65,17 @@
 ### Day 21 - Elevation
 
 ![](day21_elevation/plot.png)
+
+### Day 22 - Boundaries
+
+![](day22_boundaries/plot.png)
+
+### Day 23 - Global Human Settlement Layer
+
+![](day23_GHSL/plot.png)
+
+### Day 25 - Interactive
+
+![](day25_interactive/plot.gif)
+
+(Link to interactive version)[https://rvdatainsights.shinyapps.io/PrecipitationDiffAfrica/]

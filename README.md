@@ -79,3 +79,19 @@
 ![](day25_interactive/plot.gif)
 
 (Link to interactive version)[https://rvdatainsights.shinyapps.io/PrecipitationDiffAfrica/]
+
+### Day 26 - Choropleth
+
+![](day26_choropleth/plot.png)
+
+### Day 27 - Heatmap
+
+![](day27_heatmap/plot.png)
+
+### Day 29 - NULL
+
+![](day29_NULL/plot.png)
+
+### Day 30 - Metamapping
+
+![](day30_metamap/plot.png)

@@ -20,7 +20,7 @@ leaflet() %>%
                 labelOptions = labelOptions(noHide = T,direction="left")) %>%
   addRectangles(-3,-0.7,16,23, label="Ghana, Burkina Faso, Niger: 25",
                 labelOptions = labelOptions(noHide = T,direction="left")) %>%
-  addLabelOnlyMarkers(90,-50,label="World: 6,7,8,27,30",
+  addLabelOnlyMarkers(90,-50,label="World: 6,7,8,27,29,30",
                       labelOptions = labelOptions(noHide = T,direction="right")) %>%
   addLabelOnlyMarkers(5,70,label="Europe: 3",
                       labelOptions = labelOptions(noHide = T,direction="top")) %>%

@@ -13,6 +13,8 @@ leaflet() %>%
                 labelOptions = labelOptions(noHide = T,direction="right")) %>%
   addRectangles(5.99, 47.30, 15.02, 54.98, label="Germany: 2,5,17,18,23",
                 labelOptions = labelOptions(noHide = T,direction="right")) %>%
+  addRectangles(112, -10, 155, -45, label="Australia: 13",
+                labelOptions = labelOptions(noHide = T,direction="left")) %>%
   addRectangles(-19,-35,51,38) %>% # Africa
   addRectangles(-16.9,27.9,-16.1,28.7,label="Canary Islands: 19,20",
                 labelOptions = labelOptions(noHide = T,direction="left")) %>%

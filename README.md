@@ -46,6 +46,10 @@
 
 ![](day12_population/plot.png)
 
+### Day 13 - Natural Earth
+
+![](day13_naturalearth/plot.png)
+
 ### Day 15 - Map without using a computer
 
 ![](day15_withoutcomputer/plot.jpeg)
